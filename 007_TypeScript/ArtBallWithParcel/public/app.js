@@ -1,0 +1,2 @@
+(()=>{const{random:t,PI:e,min:n,cos:i,sin:o}=Math,h=2*e,c=e=>{const n=t()*h;return{x:e*i(n),y:e*o(n)}},{min:s}=Math,d=document.getElementById("drawing");d.width=d.clientWidth,d.height=d.clientHeight;const{width:g,height:m}=d,r=.8*s(g,m)/2,a=d.getContext("2d"),l=()=>{const{x:t,y:e}=c(r),{x:n,y:i}=c(r);((t,e,n,i)=>{const[o,h]=[g/2,m/2];a.beginPath(),a.moveTo(o+t,h-e),a.lineTo(o+n,h-i),a.stroke()})(t,e,n,i)};for(let t=0,e=0,n=30;t<5e3;++t,e+=n)setTimeout(l,e)})();
+//# sourceMappingURL=app.js.map

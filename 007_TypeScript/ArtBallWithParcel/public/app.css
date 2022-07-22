@@ -1,0 +1,17 @@
+#drawing{
+    /* Esto será un cuadrado*/
+
+    height: 100vmin; /* VMIN significa, toma el ANCHO o ALTO más pequeño*/
+    width: 100vmin;
+    background-color: lightblue;
+}
+
+html,body{
+    background-color:rgb(226,224,224);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*# sourceMappingURL=app.css.map */
