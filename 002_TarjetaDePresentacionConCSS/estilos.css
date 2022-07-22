@@ -1,0 +1,76 @@
+/* Importando tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,700;1,200;1,400;1,600&family=Square+Peg&display=swap');
+
+
+/* Declarando variables del CSS */
+:root{
+    --primary-color:#FDA3B1;
+    --secondary-color:#FB7388;
+    --third-red:#F94C67;
+    --four-red:#F40027;
+}
+
+
+body{
+    background: linear-gradient(90deg,var(--primary-color),var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Source Serif Pro', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -->CONTENEDOR DE LA IMAGEN <-- */
+.card{
+    background-color: rgb(236, 226, 226)/* var(--primary-color) */;
+    /* width: 25%; */
+    max-width: 20rem;    /* max-width sobreescribe a width */
+    min-width: 10rem;   /* Ancho mínimo que puede tener la tarjeta */
+    text-align: center; /* Centrar elementos hijos */
+    padding: 2rem;
+    border: 4px solid var(--four-red);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(88, 88, 88);
+}
+
+/** -->Con esta propiedad se garantiza que 
+ ** --> La imagen siempre estará dentro de su contenedor (El de arriba)
+*/
+.card img{
+    max-width: 100%;
+    width: 40%;
+    border: 4px solid var(--four-red);
+    border-radius: 99rem;   /* Se forma un circulo, si la imagen es CUADRADA */
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 5px rgb(88, 88, 88);
+}
+
+
+.title{
+    color:var(--four-red);
+}
+
+.subtitle{
+    color:rgb(85, 78, 78);
+    text-transform: capitalize;
+}
+
+.icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+/* El navegador trata a los iconos como texto */
+.icon-container p{
+    margin: 1rem;
+    color: var(--four-red);
+    font-size: 2rem;
+}

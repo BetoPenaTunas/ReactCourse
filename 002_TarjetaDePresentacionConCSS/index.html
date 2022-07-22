@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- Se especifica que se creará un documento HTML 5 -->
+<html lang="es"> <!-- El atributo "lang" describe en qué idioma está construida la página -->
+<head>  <!-- En HEAD sólo se muestra INFO de la página -->
+    <meta charset="UTF-8">  <!-- Importante para mostrara caractéres latinos -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> No es necesario este META -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport permite redimenzionar la página con base al dispositivo donde se vea dicha página -->
+    <title>CSS Card</title><!-- Titulo que se muestra en la pestaña de la página -->
+    
+    <!--
+        FONT AWESOME PLUGINS 
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- MY Stylesheet -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>  <!-- Body: Todo el contenido de la página -->
+    <div class="card">
+        <img src="avatarBigger.png" alt="Alberto Peña"> <!-- En "alt" no poner "imagen, image o foto" por que afecta en el posicionamiento SEO-->
+        <h1 class="title">Alberto Peña </h1>
+        <h2 class="subtitle">Front-End Developer</h2>
+        <!-- lorem10(10 palabras) -->
+        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, iure.</p>
+        
+        <div class="icon-container">
+            <p><i class="fa-brands fa-facebook-f"></i></p>
+            <p><i class="fa-brands fa-twitter"></i></p>
+            <p><i class="fa-brands fa-github"></i></p>
+            <p><i class="fa-brands fa-linkedin"></i></p>
+        </div>
+    </div>    
+</body>
+</html>

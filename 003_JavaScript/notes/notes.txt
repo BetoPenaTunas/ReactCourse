@@ -1,0 +1,7 @@
+--->NUMBERS<----
+Existen 4 valores numéricos: 
+- Non-zero value 
+- 0
+- null: algo vacío, NO HAY ERROR
+- undefined: no definido, no existe, es un ERROR
+
