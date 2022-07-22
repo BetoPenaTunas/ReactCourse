@@ -1,0 +1,8 @@
+section {
+  background: steelblue; }
+  section .actions button {
+    color: black;
+    background-color: lightcoral;
+    padding: 0.8rem; }
+  section h1 {
+    color: red; }

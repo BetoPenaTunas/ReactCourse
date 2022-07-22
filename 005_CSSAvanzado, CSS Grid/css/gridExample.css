@@ -1,0 +1,62 @@
+.dad{
+    font-size: 1.5rem;
+    width: 100%;
+    min-height: 300px;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(1fr,3);
+    grid-template-columns: repeat(1fr,2);
+    grid-template-areas: "main second second"
+                         "main third  fourth";
+    gap: 0.8rem;
+}
+
+/* --->PRIMERA FORMA <--- */
+/* .main{
+    background-color: blue;
+    grid-area: main;
+}
+
+.second{
+    background-color: red;
+    grid-area: second;
+}
+
+.third{
+    background-color: purple;
+    grid-area: third;
+}
+
+.fourth{
+    background-color: green;
+    grid-area: fourth;
+} */
+
+
+/* ---> SEGUNDA FORMA <--- */
+/* Con PSEUDOCLASES 
+    firts child, last child y números 
+*/
+
+/* padre:elementoHijoNecesitado:pseudoClase */
+.dad div:first-child{
+    background-color: blue;
+    grid-area: main;
+}
+
+/* padre:nth-child(No. Hijo o 2n, 2n+1) */
+/* ESTA PSEUDOCLASE ES ÚTIL EN TABLAS  */
+.dad div:nth-child(2){
+    background-color: red;
+    grid-area: second;
+}
+
+.dad div:nth-child(3){
+    background-color: purple;
+    grid-area: third;
+}
+
+.dad div:last-child{
+    background-color: green;
+    grid-area: fourth;
+}

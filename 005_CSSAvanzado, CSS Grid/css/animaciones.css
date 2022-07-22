@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box  ;
+}
+div{
+    background-color: beige;
+    min-width: 2rem;
+    width: 100%;
+    min-height: 2rem;
+    padding: 1rem;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+.dad{
+    margin-bottom: 3rem;
+}
+/** ---> PREANIMACIONES <---*/
+/*-->HOVER <--- */
+/* Sólo se aplica a los ELEMENTOS IMPARES */
+.dad div:nth-child(2n+1):hover{
+    background-color: lightcoral;
+}
+.dad div:nth-child(2n+1):hover{
+    transform: translate(0.3rem,0.3rem); /* Movimiento EJE X, Movimiento EJE Y */
+    font-weight: 800;   /* Se hace negrita la letra */
+    font-size: 1.5rem;  /* Se hace más grande la letra */
+}
+
+/* Sólo se aplica a los ELEMENTOS PARES */
+.dad div:nth-child(2n):hover{
+    background-color: lightgreen;
+}
+.dad div:nth-child(2n):hover{
+    transform:scale(0.98);
+}
+
+
+/** ---->TRANSICIONES <---- */
+.dad div{
+    transition: all 500ms ease-in;
+}
+
+
+/** ---->ANIMACIONES <----  */
+.animaciones div:nth-child(1):hover{
+/*     animation: AnyExistingNameFromKeyFrame duration timing-function delay iteration-count direction fill-mode; */
+    animation: my-animation infinite 4s linear; /* linear se pone para que algo sea MAS CONSISTENTE */
+    /* Recordar que LAS COSAS LINEALES no las piden MUCHO 
+       Tratar de elegir un efecto distinto
+     */
+}
+@keyframes my-animation{
+
+    /* Intervalos de tiempo */
+    0%{
+        transform: rotate(0deg);
+        background-color: lawngreen;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: lightcoral;
+    }   
+    100%{
+        transform: rotate(360deg);
+        background-color: lightblue;
+    }
+}

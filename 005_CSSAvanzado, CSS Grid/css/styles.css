@@ -1,0 +1,52 @@
+/* 
+    ---> GRID <---
+    -Es responsivo por defecto por que 1fr, es lo que vale la pantalla
+*/
+div{
+    background-color: beige;
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+section{
+    display: grid;
+    margin-bottom: 3rem;
+    /*
+    
+        GRID TEMPLATE-ALGO indica si se quiere trabajar
+        con COLUMNAS O FILAS, idealmente se trabaja con 1 
+        aunque cosas muy complicadas si pueden trabajar
+        columns y rows a la vez
+    */
+    /* grid-template-columns: 100px 100px; */ /* Dos columnas de 100px */
+    /* grid-template-columns: 3rem 3rem 1rem; */
+    /* grid-template-columns: 1fr 1fr 1fr; */ /* Toma el ancho de la pantalla y divide en 3 partes iguales */
+    grid-template-columns: 1fr 2fr 3fr; /*Primera caja mide 1, la 2da el doble y la tercera el triple. Hace una suma 1+2+3=6*/ 
+    
+
+}
+
+.test2{
+    display: grid;
+    margin-bottom: 3rem;
+    grid-template-columns: 1fr auto; /* Es recomendable no hacer esto */
+                                     /* auto: es el tamaño que una caja */
+}
+
+.test3{
+    display: grid;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(3,1fr);   /* 3 columnas 2 1fr */
+}
+
+.test4{
+    display: grid;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(3,1fr);   /* 3 columnas 2 1fr */
+    /* grid-template-rows: repeat(5,10fr); */
+    gap: 1rem;  /* Separación entre CELDAS  */
+}
+
+
