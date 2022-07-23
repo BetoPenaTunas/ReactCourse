@@ -1,0 +1,24 @@
+@import "mixins";
+header{
+    width: 100vw;
+    background-color:beige;
+    border: 1px solid black;
+    height: 4rem;
+    
+    .container{
+        @include container; /* Así se agregan ESTILOS del mixin */
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+
+    nav{
+        a{
+            margin-left: 1rem;
+            color: blue;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+}

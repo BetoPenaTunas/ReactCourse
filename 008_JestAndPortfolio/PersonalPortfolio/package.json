@@ -1,0 +1,15 @@
+{
+  "name": "personal_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BetoPenaTunas/PersonalPortfolio.git",
+  "author": "Alberto Peña <gabinas2011@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.2",
+    "parcel": "^2.6.2"
+  },
+  "scripts": {
+    "dev": "parcel index.html -p 3100"
+  }
+}

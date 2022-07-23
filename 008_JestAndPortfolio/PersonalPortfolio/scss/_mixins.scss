@@ -1,0 +1,9 @@
+/* Con esto creo un CÓDIGO REPLICABLE */
+/* Este archivo se debe de importar en otro archivo donde se 
+    quieran ocupar los mixins 
+*/
+@mixin container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}

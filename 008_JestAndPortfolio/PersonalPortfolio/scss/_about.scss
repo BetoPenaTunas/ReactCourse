@@ -1,0 +1,71 @@
+/* Importando un código CSS replicable */
+@import "mixins";
+
+#about {
+    background-color: rgb(210, 243, 242);
+    .container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30rem;
+        /* 
+    & --> Se refiere al ELEMENTO EXTERNO, 
+          que tiene a los elementos anidados
+          En este caso CONTAINER.
+
+    & > * --> Significa, a todos los hijos de CONTAINER dales cierto ESTILO
+    */
+        /* &>* {
+            border: 3px solid red;
+        } */
+
+        .info {
+            width: 48.5%;
+            h2{
+                color: blue;
+                margin-bottom: 1rem;
+            }
+            p{
+                margin-bottom: 1rem;
+            }
+
+            .actions{
+                display: flex;
+                justify-content: space-evenly;
+                button{
+                    margin-right: 1rem;
+                    background-color: royalblue;
+                    color: #fff;
+                    padding: .3rem .6rem;
+                    border: none;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .image {
+            width: 48.5%;
+
+            /* Para añadir imágenes, es recomendable hacer que estas ocupen un width:100% 
+            respecto a su contenedor, CADA IMAGEN DEBE DE TENER UN CONTENEDOR LLAMADO FIGURE */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            figure{
+                border: 1px solid red;
+                width: 70%;
+                img{
+                    /* Quitar las siguientes 2 propiedades y ver el cambio */
+                    /* Activar el border, para ver mejor  */
+                    width: 100%;
+                    max-width: 100%;
+                    border-radius: 50%;
+                }   
+            }
+        }
+    }
+
+}

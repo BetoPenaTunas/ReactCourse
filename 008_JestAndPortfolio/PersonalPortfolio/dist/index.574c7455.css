@@ -1,0 +1,94 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  font-size: large;
+}
+
+header {
+  width: 100vw;
+  height: 4rem;
+  background-color: beige;
+  border: 1px solid #000;
+}
+
+header .container {
+  width: 90%;
+  max-width: 1000px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+header nav a {
+  color: #00f;
+  margin-left: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#about {
+  background-color: #d2f3f2;
+}
+
+#about .container {
+  width: 90%;
+  max-width: 1000px;
+  height: 30rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+#about .container .info {
+  width: 48.5%;
+}
+
+#about .container .info h2 {
+  color: #00f;
+  margin-bottom: 1rem;
+}
+
+#about .container .info p {
+  margin-bottom: 1rem;
+}
+
+#about .container .info .actions {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+#about .container .info .actions button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4169e1;
+  border: none;
+  border-radius: .3rem;
+  margin-right: 1rem;
+  padding: .3rem .6rem;
+}
+
+#about .container .image {
+  width: 48.5%;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+#about .container .image figure {
+  width: 70%;
+  border: 1px solid red;
+}
+
+#about .container .image figure img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=index.574c7455.css.map */
