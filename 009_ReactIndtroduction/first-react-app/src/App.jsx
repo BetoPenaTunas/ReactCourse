@@ -10,11 +10,28 @@ import User from "./User";
 */
 
 const App = () =>{
+    
+    const arr =["Cristy","Pepe","Liz"]
+
     return (
         <>
             <h1>Hello World with React !!!</h1>
             <User name="Oscar"></User>
             <User name="Alberto"></User>
+
+            {
+                //-->RENDERIZANDO DE OBJETOS<--
+                /*
+                Se ocupa .map para iterar en cada elemento
+                del array y retornar un nuevo arreglo con
+                notación JSX <p>elementoJS</p>
+                Ver documentación de .map 
+                */
+                arr.map((nameJSX,i)=>(
+                    <p key={i}>Hello, it's {nameJSX}</p> //Poner "{}" por que ya estamos en JSX
+                ))
+
+            }
         </>
         
     );
