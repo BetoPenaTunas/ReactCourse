@@ -1,0 +1,9 @@
+.App{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article{
+    background-color: lightcoral;  
+    margin: 1rem;
+    padding: 0.3rem;  
+}
