@@ -1,7 +1,11 @@
 import {React,useRef,useState,useEffect} from 'react'
 import { Reproductor } from './Reproductor'
 import "./styles.css"
-export const Search = () => {
+import styles from "./Search.module.css"
+//import rand from "randomcolor"; /* Librería que sirve para dar un COLOR RANDOM A ALGO */
+import { Song } from './Song';
+                                /* rand --> Puede ser otro nombre  */
+export const Search = ({favoriteSongs,setFavoriteSongs}) => {
     
     const queryRef=useRef(null)    /* Este HOOK Tiene una variable de estado modificable */
                                 /* Pero no una función que modifique y RENDERICE A la vez */
@@ -38,31 +42,34 @@ export const Search = () => {
     */
     useEffect(
         ()=>{
+            console.log('--->USE EFFECT<--');
             console.log(songs);
         },[songs]);
 
     return (
-    <div className='App'>
+    <div  className="App">
         {/* Interesa acceder a la info que el usuario VAYA ESCRIBIENDO */}
         <input ref={queryRef} />    {/* Guardando el NODO HTML en queryRef */}
         <button onClick={search}>Search</button>    {/* Al hacer click, ir ejecutar "search" */}
-    
-           
         
-        {/* --> IMPRIMIENDO LAS CANCIONES <---        */}
-        {
-            songs.map((song,index)=>(
-               <div key={index}>
-                    <h3>
-                        Canción: {song.name} - Artista:{song.artistName}  - Album:{song.albumName}
-                    </h3>
+        
+        <section className={styles.songContainer}>
+            {/* --> IMPRIMIENDO LAS CANCIONES <---        */}
+            {
+                songs.map((song,index)=>(
+                    <Song 
+                        key={index} 
+                        song={song} 
+                        setCurrentSong={setCurrentSong} 
+                        styles={styles}
+                        favoriteSongs={favoriteSongs}
+                        setFavoriteSongs={setFavoriteSongs}
+                    />
+                ))
+            }
 
-                    {/* Botton que actualiza el estado de la canción que se reproducirá */}
-                    <button onClick={()=>setCurrentSong(song)}>Play</button>
-               </div>
-               
-            ))
-        }
+        </section>
+        
         {
             /* -->HACIENDO CONDITIONAL RENDERING en caso de que currentSong == null
              */
